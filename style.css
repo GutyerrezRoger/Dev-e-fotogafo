@@ -1,0 +1,130 @@
+:root {
+  --cor-clara: #F2CDAC;
+  --cor-principal: #BF3A0A;
+  --cor-secundaria: #732407;
+  --cor-escura: #401404;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor-escura);
+  font-family: 'Inter', sans-serif;
+  color: var(--cor-clara);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--cor-secundaria);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+.btn-contato {
+  background-color: var(--cor-principal);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-contato:hover {
+  background-color: var(--cor-clara);
+  color: var(--cor-escura);
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.texto {
+  flex: 1;
+  max-width: 500px;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--cor-clara);
+}
+
+.texto p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-dev {
+  background-color: var(--cor-principal);
+  color: white;
+}
+
+.btn-dev:hover {
+  background-color: var(--cor-clara);
+  color: var(--cor-escura);
+}
+
+.btn-foto {
+  background-color: transparent;
+  color: var(--cor-clara);
+  border: 2px solid var(--cor-clara);
+}
+
+.btn-foto:hover {
+  background-color: var(--cor-clara);
+  color: var(--cor-escura);
+}
+
+.imagem {
+  flex: 1;
+  max-width: 500px;
+}
+
+.imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  background-color: var(--cor-secundaria);
+  padding: 20px;
+  text-align: center;
+}
+
