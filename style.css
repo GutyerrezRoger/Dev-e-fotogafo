@@ -1,8 +1,8 @@
 :root {
-  --cor-base: #401404;         /* Cor principal agora */
-  --cor-clara: #F2CDAC;        /* Destaques e fontes suaves */
-  --cor-principal: #BF3A0A;    /* Botões de ação */
-  --cor-secundaria: #732407;   /* Bordas e elementos de contraste */
+  --cor-clara: #F2CDAC;
+  --cor-principal: #BF3A0A;
+  --cor-secundaria: #732407;
+  --cor-escura: #401404;
 }
 
 * {
@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: var(--cor-base);
+  background-color: var(--cor-escura);
   font-family: 'Inter', sans-serif;
   color: var(--cor-clara);
   min-height: 100vh;
@@ -20,14 +20,12 @@ body {
   flex-direction: column;
 }
 
-/* ===== HEADER ===== */
 header {
-  background-color: var(--cor-base);
+  background-color: var(--cor-secundaria);
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--cor-secundaria);
 }
 
 header h1 {
@@ -36,7 +34,7 @@ header h1 {
 
 .btn-contato {
   background-color: var(--cor-principal);
-  color: var(--cor-base);
+  color: white;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 10px;
@@ -45,10 +43,9 @@ header h1 {
 
 .btn-contato:hover {
   background-color: var(--cor-clara);
-  color: var(--cor-base);
+  color: var(--cor-escura);
 }
 
-/* ===== CONTEÚDO PRINCIPAL ===== */
 .container {
   display: flex;
   flex: 1;
@@ -93,13 +90,13 @@ header h1 {
 }
 
 .btn-dev {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-clara);
+  background-color: var(--cor-principal);
+  color: white;
 }
 
 .btn-dev:hover {
   background-color: var(--cor-clara);
-  color: var(--cor-base);
+  color: var(--cor-escura);
 }
 
 .btn-foto {
@@ -110,10 +107,9 @@ header h1 {
 
 .btn-foto:hover {
   background-color: var(--cor-clara);
-  color: var(--cor-base);
+  color: var(--cor-escura);
 }
 
-/* ===== IMAGEM ===== */
 .imagem {
   flex: 1;
   max-width: 500px;
@@ -126,10 +122,8 @@ header h1 {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ===== FOOTER ===== */
 footer {
-  background-color: var(--cor-base);
+  background-color: var(--cor-secundaria);
   padding: 20px;
   text-align: center;
-  border-top: 2px solid var(--cor-secundaria);
 }
