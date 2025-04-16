@@ -3,34 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gutyerrez Roger | Portfólio</title>
-  <link rel="icon" href="favicon.ico" />
+  <title>Dev Roger</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
-<body>
+<body class="fade-in">
   <header>
-    <h1>Gutyerrez Roger</h1>
-    <a href="https://wa.me/5581985723833" target="_blank" class="btn-contato">Contato</a>
+    <h1>Dev Roger</h1>
+    <nav>
+      <a href="https://wa.me/5581985723833" target="_blank">Contato</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="texto">
-      <h2>Quem sou eu?</h2>
-      <p>Um criador de experiências: seja programando soluções digitais ou capturando a beleza do mundo pela lente da minha câmera. Aqui, você pode explorar meus dois lados criativos.</p>
+  <main>
+    <div class="left">
+      <h2>Bem-vindo!</h2>
+      <p>
+        Eu sou o Gutyerrez, um apaixonado por tecnologia e arte. 
+        Aqui você pode explorar meus dois lados: o desenvolvedor web e o fotógrafo. 
+        Qual caminho você quer seguir hoje?
+      </p>
       <div class="botoes">
-        <a href="dev.html" class="btn btn-dev">Explorar meu lado Dev 💻</a>
-        <a href="foto.html" class="btn btn-foto">Explorar meu lado Fotógrafo 📸</a>
+        <a href="dev.html" class="btn" data-link>Explorar Desenvolvedor</a>
+        <a href="fotografo.html" class="btn" data-link>Explorar Fotógrafo</a>
       </div>
-    </section>
-
-    <section class="imagem">
-      <img src="img/fotoprincipal.JPG" alt="Foto de Guty">
-    </section>
+    </div>
+    <div class="right">
+      <img src="img/fotoprincipal.JPG" alt="Gutyerrez Roger" />
+    </div>
   </main>
 
   <footer>
-    <!-- Aqui você pode colar suas redes sociais depois -->
+    <!-- Espaço reservado para redes sociais -->
   </footer>
+
+  <script>
+    // Animação de transição suave
+    document.querySelectorAll('[data-link]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const url = this.getAttribute('href');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = url;
+        }, 400);
+      });
+    });
+  </script>
 </body>
 </html>
