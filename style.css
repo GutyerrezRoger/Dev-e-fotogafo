@@ -1,0 +1,252 @@
+:root {
+  --cor-fundo: #1A2426;         /* Fundo principal: escuro chique */
+  --cor-destaque: #A67951;      /* Destaque quente */
+  --cor-clara: #F2DFCE;         /* Contraste suave */
+  --cor-secundaria: #733917;    /* Acentos e detalhes */
+  --cor-texto: #F2F2F2;         /* Textos claros */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  font-family: 'Inter', sans-serif;
+  color: var(--cor-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--cor-fundo);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--cor-secundaria);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--cor-clara);
+}
+
+.btn-contato {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-contato:hover {
+  background-color: var(--cor-clara);
+  color: var(--cor-fundo);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.container {
+  display: flex;
+  flex: 1;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.texto {
+  flex: 1;
+  max-width: 500px;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--cor-clara);
+}
+
+.texto p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: var(--cor-texto);
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-dev {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-clara);
+}
+
+.btn-dev:hover {
+  background-color: var(--cor-clara);
+  color: var(--cor-fundo);
+}
+
+.btn-foto {
+  background-color: transparent;
+  color: var(--cor-clara);
+  border: 2px solid var(--cor-clara);
+}
+
+.btn-foto:hover {
+  background-color: var(--cor-clara);
+  color: var(--cor-fundo);
+}
+
+/* ===== IMAGEM ===== */
+.imagem {
+  flex: 1;
+  max-width: 500px;
+}
+
+.imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--cor-fundo);
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid var(--cor-secundaria);
+  color: var(--cor-clara);
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Aplicando animações ao conteúdo */
+.texto {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.imagem {
+  animation: fadeInRight 1s ease forwards;
+}
+
+/* Pequeno delay pro efeito suave */
+.texto, .imagem {
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+/* ===== RESPONSIVO: Telas até 768px (mobile e tablets) ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .texto {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+    max-width: 100%;
+  }
+
+  .imagem {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+    max-width: 100%;
+  }
+
+  .imagem img {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+
+  .texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+
+  .botoes {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
+
