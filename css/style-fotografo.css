@@ -1,74 +1,111 @@
+/* style-fotografo.css */
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0D0D0D;
   color: #F2F2F2;
 }
 
-header, footer {
+header {
   background-color: #252625;
+  padding: 1rem 2rem;
   text-align: center;
-  padding: 1rem;
 }
 
 header h1 {
   margin: 0;
   font-size: 2rem;
-}
-
-.destaque {
   color: #A67951;
-  font-weight: bold;
 }
 
-.portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.album {
-  cursor: pointer;
-  text-align: center;
-  background-color: #1A2426;
-  border-radius: 8px;
-  padding: 1rem;
-  transition: transform 0.2s ease;
-}
-
-.album:hover {
-  transform: scale(1.03);
-}
-
-.album img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-.album h2 {
-  margin-top: 0.5rem;
+header h1 span {
   color: #F2DFCE;
 }
 
-.album-detalhe {
+main {
   padding: 2rem;
 }
 
-.album-detalhe .descricao {
-  color: #9C9FA6;
-  margin-bottom: 1.5rem;
-  text-align: center;
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
-.galeria {
+.album-card {
+  background-color: #525259;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.album-card:hover {
+  transform: scale(1.02);
+}
+
+.album-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.album-card .album-info {
+  padding: 1rem;
+}
+
+.album-card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #F2DFCE;
+}
+
+.album-card p {
+  font-size: 0.9rem;
+  color: #DADADA;
+  margin-top: 0.5rem;
+}
+
+footer {
+  background-color: #252625;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #9C9FA6;
+  margin-top: 4rem;
+}
+
+/* Página individual do álbum */
+.album-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.album-page h1 {
+  color: #F2DFCE;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.album-page p {
+  color: #CFCFCF;
+  margin-bottom: 2rem;
+}
+
+.album-photos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
-.galeria img {
+.album-photos img {
   width: 100%;
+  height: auto;
   border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.album-photos img:hover {
+  transform: scale(1.05);
 }
