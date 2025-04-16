@@ -1,11 +1,6 @@
-:root {
-  --cor-fundo: #1A2426;         /* Fundo principal: escuro chique */
-  --cor-destaque: #A67951;      /* Destaque quente */
-  --cor-clara: #F2DFCE;         /* Contraste suave */
-  --cor-secundaria: #733917;    /* Acentos e detalhes */
-  --cor-texto: #F2F2F2;         /* Textos claros */
-}
+/* style.css */
 
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -13,257 +8,146 @@
 }
 
 body {
-  background-color: var(--cor-fundo);
-  font-family: 'Inter', sans-serif;
-  color: var(--cor-texto);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  background-color: #F2F2F2;
+  color: #252625;
 }
 
-/* ===== HEADER ===== */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* Header */
 header {
-  background-color: var(--cor-fundo);
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid var(--cor-secundaria);
+  background-color: #A67951;
+  color: #F2DFCE;
+  padding: 20px;
+  text-align: center;
 }
 
 header h1 {
-  font-size: 1.8rem;
-  color: var(--cor-clara);
+  font-size: 2.5rem;
 }
 
-.btn-contato {
-  background-color: var(--cor-destaque);
-  color: var(--cor-fundo);
-  text-decoration: none;
+/* Main */
+main {
+  padding: 40px 20px;
+}
+
+.home-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.home-text h2 {
+  font-size: 2.5rem;
+  color: #733917;
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.home-buttons a {
+  display: inline-block;
   padding: 10px 20px;
-  border-radius: 10px;
+  margin: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: #F2DFCE;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.btn-contato:hover {
-  background-color: var(--cor-clara);
-  color: var(--cor-fundo);
-}
-
-/* ===== CONTEÚDO PRINCIPAL ===== */
-.container {
-  display: flex;
-  flex: 1;
-  padding: 40px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.texto {
-  flex: 1;
-  max-width: 500px;
-}
-
-.texto h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--cor-clara);
-}
-
-.texto p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
-  color: var(--cor-texto);
-}
-
-.botoes {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.btn {
-  padding: 15px;
-  text-align: center;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: background 0.3s, color 0.3s;
-}
-
 .btn-dev {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-clara);
+  background-color: #733917;
 }
 
 .btn-dev:hover {
-  background-color: var(--cor-clara);
-  color: var(--cor-fundo);
+  background-color: #A67951;
 }
 
-.btn-foto {
-  background-color: transparent;
-  color: var(--cor-clara);
-  border: 2px solid var(--cor-clara);
+.btn-photo {
+  background-color: #A67951;
 }
 
-.btn-foto:hover {
-  background-color: var(--cor-clara);
-  color: var(--cor-fundo);
+.btn-photo:hover {
+  background-color: #733917;
 }
 
-/* ===== IMAGEM ===== */
-.imagem {
-  flex: 1;
-  max-width: 500px;
-}
-
-.imagem img {
-  width: 100%;
+.home-image img {
+  max-width: 100%;
   height: auto;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background-color: var(--cor-fundo);
+/* Portfolio (fotografo.html) */
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
   padding: 20px;
+}
+
+.album-card {
+  background-color: #9C9FA6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.album-card:hover {
+  transform: scale(1.05);
+}
+
+.album-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.album-card h2 {
+  font-size: 1.8rem;
+  color: #252625;
+  padding: 15px;
+}
+
+.album-card p {
+  color: #252625;
+  padding: 0 15px 15px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #252625;
+  color: #F2DFCE;
   text-align: center;
-  border-top: 2px solid var(--cor-secundaria);
-  color: var(--cor-clara);
+  padding: 20px;
+  margin-top: 20px;
 }
 
-/* ===== ANIMAÇÕES ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+footer p {
+  font-size: 1rem;
 }
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Aplicando animações ao conteúdo */
-.texto {
-  animation: fadeInLeft 1s ease forwards;
-}
-
-.imagem {
-  animation: fadeInRight 1s ease forwards;
-}
-
-/* Pequeno delay pro efeito suave */
-.texto, .imagem {
-  opacity: 0;
-  animation-delay: 0.2s;
-}
-
-/* ===== RESPONSIVO: Telas até 768px (mobile e tablets) ===== */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .texto {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-    animation-delay: 0.2s;
-    max-width: 100%;
-  }
-
-  .imagem {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-    animation-delay: 0.2s;
-    max-width: 100%;
-  }
-
-  .imagem img {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 15px;
-  }
-
-  .texto h2 {
-    font-size: 1.6rem;
-  }
-
-  .texto p {
-    font-size: 1rem;
-  }
-
-  .botoes {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .btn {
-    width: 80%;
-    padding: 12px;
-    font-size: 1rem;
-  }
-
-  header {
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    text-align: center;
-  }
-
-  footer {
-    font-size: 0.9rem;
-    padding: 15px;
-  }
-}
-
-/* Efeito de fade-in e fade-out */
-body.fade-in {
-  animation: fadeIn 0.5s ease-in;
-}
-body.fade-out {
-  animation: fadeOut 0.4s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to   { opacity: 0; }
-}
-
