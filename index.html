@@ -1,54 +1,42 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dev Roger</title>
+  <title>Gutyerrez Roger</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
 </head>
-<body class="fade-in">
+<body>
+
   <header>
-    <h1>Gutyerrez ROger</h1>
+    <h1>Dev Roger</h1>
     <nav>
       <a href="https://wa.me/5581985723833" target="_blank">Contato</a>
     </nav>
   </header>
 
-  <main>
-    <div class="left">
-      <h2>Quem sou eu?</h2>
+  <main class="home-main">
+    <div class="home-text">
+      <h2>Seja bem-vindo!</h2>
       <p>
-       Um apaixonado por tecnologia e arte. 
-        Aqui você pode explorar meus dois lados: o desenvolvedor web e o fotógrafo. 
-        Qual caminho você quer explorar hoje?
+        Sou Gutyerrez Roger e aqui você encontra meus dois universos criativos: <strong>tecnologia</strong> e <strong>fotografia</strong>.
+        Escolha por onde quer começar essa jornada!
       </p>
-      <div class="botoes">
-        <a href="dev.html" class="btn" data-link>Guty Desenvolvedor</a>
-        <a href="fotografo.html" class="btn" data-link>Guty Fotógrafo</a>
+      <div class="home-buttons">
+        <a href="dev.html" class="btn-dev">Ver portfólio Dev</a>
+        <a href="fotografo.html" class="btn-photo">Ver portfólio Fotógrafo</a>
       </div>
     </div>
-    <div class="right">
-      <img src="img/fotoprincipal.JPG" alt="Gutyerrez Roger" />
+    <div class="home-image">
+      <img src="img/fotoprincipal.JPG" alt="Gutyerrez Roger">
     </div>
   </main>
 
   <footer>
-    <!-- Espaço reservado para redes sociais -->
+    <p>© 2025 - Gutyerrez Roger</p>
   </footer>
 
-  <script>
-    // Animação de transição suave
-    document.querySelectorAll('[data-link]').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const url = this.getAttribute('href');
-        document.body.classList.add('fade-out');
-        setTimeout(() => {
-          window.location.href = url;
-        }, 400);
-      });
-    });
-  </script>
 </body>
 </html>
